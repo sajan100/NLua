@@ -10,6 +10,8 @@ namespace NLua
     [AttributeUsage(AttributeTargets.Method)]
     public sealed class LuaGlobalAttribute : Attribute
     {
+        public LuaGlobalAttribute(string name = null, string description = null) =>
+            (Name, Description) = (name, description);
         /// <summary>
         /// An alternative name to use for calling the function in Lua - leave empty for CLR name
         /// </summary>
