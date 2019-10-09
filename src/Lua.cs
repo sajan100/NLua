@@ -240,6 +240,13 @@ namespace NLua
             // We need to keep this in a managed reference so the delegate doesn't get garbage collected
             _luaState.AtPanic(PanicCallback);
         }
+        public Lua(Lua lua)
+        {
+            _luaState = lua.State.NewThread();
+            
+            _translator = lua._translator;
+            ObjectTranslatorPool.Instance.Add(_luaState, _translator);
+        }
 
         /*
             * CAUTION: NLua.Lua instances can't share the same lua state! 
