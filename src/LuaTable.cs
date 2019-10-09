@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 using NLua.Extensions;
 
@@ -65,7 +66,7 @@ namespace NLua
             return lua.GetTableDict(this).GetEnumerator();
         }
 
-        public ICollection Keys
+        public ICollection<object> Keys
         {
             get
             {
@@ -78,7 +79,7 @@ namespace NLua
         }
 
 
-        public ICollection Values
+        public ICollection<object> Values
         {
             get
             {
