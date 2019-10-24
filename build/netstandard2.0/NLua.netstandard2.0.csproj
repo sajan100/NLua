@@ -5,6 +5,7 @@
     <RootNamespace>NLua</RootNamespace>
     <AssemblyName>NLua</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Version>1.4.24</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
